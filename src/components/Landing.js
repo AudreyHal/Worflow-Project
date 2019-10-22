@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
-import AllBooks from './AllBooks'
-import AddBook from './AddBook'
-
+import { connect } from 'react-redux';
+import { getDocuments } from '../redux/actions/action';
 
 class Landing extends Component{
 	constructor(){
 		super();
-		this.state={
-		
+		this.state={	
 
 	}
+}
+
+componentDidMount(){
+	this.props.getDocuments()
 }
 	
 	render(){
-		return (
 		
-			<div className="selected">
-				<AllBooks/>
-				<AddBook/>
-				
+		return (		
+			<div>
+				{{documents}}			
 			</div>
 		)
 	}
-
 }
 
-export default Landing;
+
+const mapStateToProps = state => {
+	return {
+	  documents: state.documents
+		};
+  };  
+
+  export default connect(mapStateToProps, {getDocuments: getDocuments})(Landing);
