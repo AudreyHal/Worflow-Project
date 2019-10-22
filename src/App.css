@@ -1,22 +1,47 @@
-.App {
-  text-align: center;
+
+.landing-page{
+  height: 100vh;
+  background-color: red
 }
 
-.App-logo {
-  height: 40vmin;
+.sidebar{
+  background-color:  #FFFFFF;
+  padding : 70px 50px 30px;
+  height: 100%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.full-page-height{
+  height: 100% ;
 }
 
-.App-link {
-  color: #09d3ac;
+.menu-item{
+  font-size: 12px;
+  color: #8A94A6;
+  padding-bottom:25px
 }
+
+.profile-container{
+  margin-bottom: 40px;
+  text-align: center
+}
+
+.fullname{
+  font-size: 14px;
+  color: #5F5C7F;
+  
+}
+
+.position{
+  font-size: 10px;
+  color: #8A94A6;
+}
+
+.department{
+  font-size: 8px;
+  color: #ACAFB1;
+}
+
+#logout-container{
+  margin-top: 200px
+}
+

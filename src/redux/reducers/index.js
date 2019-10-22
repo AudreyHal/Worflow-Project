@@ -4,7 +4,7 @@
        case 'GET_DOCUMENTS':
           return { ...state, loading: true };
         case 'DOCUMENTS_RECEIVED':
-        return { ...state, documents: action.documents, loading: false }
+          return { ...state, documents: action.documents, loading: false }
        default:
           return state;
      }
