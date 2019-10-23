@@ -11,49 +11,28 @@ import Workflow from './Workflow'
 class Landing extends Component{
 	constructor(props){
 		super(props);
-		this.props.getData()
+		this.props.getData();
 		this.state={	
 			showComponent : false,
 			showLoader: false
-
 	}
 }
 
-componentDidMount(){
-	
-	console.log("this.props")
-	console.log(this.props.data)
-	// this.props.getDocuments()
-	
-// 	const obj=this.props.getDocuments();
-//  Object.keys(this.props.getDocuments()).map(key=> {
-// 		console.log('keyname=' + key);
+	handleClick=()=>{
+		this.props.getData();	
+		if (this.props.data){
+			this.setState({showComponent: true })		
+		}
+		if (!this.props.data){
+			this.setState({showLoader: true })		
+		}
+	}	
 
-		
-
-// 	})
-
-}
-handleClick=()=>{
-	this.props.getData()
-	console.log("this.props")
-	console.log(this.props.data)
-	if (this.props.data){
-		this.setState({showComponent: true })
-		console.log("hyyuyyt"+this.state.showComponent)
-	}
-	if (!this.props.data){
-		this.setState({showLoader: true })
-		console.log("hyyuyyt"+this.state.showComponent)
-	}
-}	
-	render(){
-	
+	render(){	
 		
 		return (		
 			<div className="landing-page">
 				<div className="row full-page-height">
-
 					<div className="col-2 sidebar">
 						<div className="profile-container">
 							<img src={profile} alt="profile" className="profile"></img>
@@ -84,15 +63,13 @@ handleClick=()=>{
 							
 						</div>						
 						
-						{this.state.showComponent ? (
-						<Workflow ></Workflow>
-						) : null} 
-
-						{this.state.showLoader ? (
-						<div className="text-center full-width row d-flex justify-content-center">          		
-							<div className="error-text">Make sure you are connected to the internet and try again.</div>
-				  		</div>
-        				) : null} 			
+						{this.state.showComponent ? (	<Workflow ></Workflow> ) : null} 
+						{this.state.showLoader ? 
+						(
+							<div className="text-center full-width row d-flex justify-content-center">          		
+								<div className="error-text">Make sure you are connected to the internet and try again.</div>
+							</div>
+						) : null} 			
 						
 					</div>    
 				</div>
@@ -105,7 +82,7 @@ handleClick=()=>{
 const mapStateToProps = state => {
 	return {
 	  data: state.workflows
-		};
-  };  
+	};
+};  
 
-  export default connect(mapStateToProps, {getData: getData})(Landing);
+export default connect(mapStateToProps, {getData: getData})(Landing);

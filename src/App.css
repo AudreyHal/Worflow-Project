@@ -49,13 +49,13 @@
 
 .navbar{
   background-color: white;
-  margin-top: 60px;
+  margin: 60px 0px 35px;
   padding: 24px 0px 24px 10px;
   color: #8A94A6;
   border-radius: 5px;
   font-size: 12px;
   text-align: center;
-  margin-bottom: 35px
+ 
 }
 
 .nav-item{
@@ -112,7 +112,9 @@
   box-shadow: 0px 2px 24px #F1F2F4;
   border-radius: 5px;
   padding: 18px 16px;
-  margin:  10px
+  margin:  10px 0px 10px 10px;
+  width: 32%;
+  height: 95px
 
 }
 
@@ -140,4 +142,8 @@
   margin-top: 40px;
   font-size: 16px;
   color: #53627C;
+}
+
+.data-container{
+  margin: 0px
 }

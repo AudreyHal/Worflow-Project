@@ -6,43 +6,27 @@ import dots from '../images/dots.png';
 
 class Workflow extends Component{
 	constructor(props){
-		super(props);
-		//this.props.getDocuments()
-		this.state={	
-
-	}
-}
-
-componentDidMount(){
-	
-	console.log("this.props")
-	console.log(this.props.workflows[0])
-	
-
+		super(props);	
+		
 }
 
 	render(){
 		const dataItems = this.props.workflows.map((item, index) =>
-		
-
-<div key={ index } class="col-3 workflow-card">
-<div class="row">
-	<div class="col-1">
-		<img src={flowchart} alt="flowchart" className="menu-icon"></img>
-	</div>
-	<div class="col-auto approval-column">
-		<div className="workflow-item data-title"><span> { item.name }</span></div>
-		<div className="workflow-item stages"><span> { item.stages } stages</span></div>
-	</div>
-	<div class="col offset-md-2 text-right">
-	<img src={dots} alt="dots" className="menu-icon"></img>
-	</div>
-</div>							
-</div>
-
-
-)
-
+			<div key={ index } class=" workflow-card">
+				<div class="row">
+					<div class="col-1">
+						<img src={flowchart} alt="flowchart" className="menu-icon"></img>
+					</div>
+					<div class="col-auto approval-column">
+						<div className="workflow-item data-title"><span> { item.name }</span></div>
+						<div className="workflow-item stages"><span> { item.stages } stages</span></div>
+					</div>
+					<div class="col offset-md-1 text-right">
+						<img src={dots} alt="dots" className="dots"></img>
+					</div>
+				</div>							
+			</div>
+		)
 		
 		return (	
 			<div>						
@@ -52,51 +36,9 @@ componentDidMount(){
 				</div>
 
 				<div class="row data-container">
-					{dataItems}
-					{/* <div class="col workflow-card">
-						<div class="row">
-							<div class="col-1">
-								<img src={flowchart} alt="flowchart" className="menu-icon"></img>
-							</div>
-							<div class="col-auto approval-column">
-								<div className="workflow-item data-title"><span> Approval Rating</span></div>
-								<div className="workflow-item stages"><span> 3 stages</span></div>
-							</div>
-							<div class="col offset-md-2 text-right">
-							<img src={dots} alt="dots" className="menu-icon"></img>
-							</div>
-						</div>							
-					</div>
-					<div class="col workflow-card">
-						<div class="row">
-							<div class="col-1">
-								<img src={flowchart} alt="flowchart" className="menu-icon"></img>
-							</div>
-							<div class="col-auto approval-column">
-								<div className="workflow-item data-title"><span> Approval Rating</span></div>
-								<div className="workflow-item stages"><span> 3 stages</span></div>
-							</div>
-							<div class="col offset-md-2 text-right">
-							<img src={dots} alt="dots" className="menu-icon"></img>
-							</div>
-						</div>							
-					</div>
-					<div class="col workflow-card">
-					<div class="row">
-						<div class="col-1">
-							<img src={flowchart} alt="flowchart" className="menu-icon"></img>
-						</div>
-						<div class="col-auto approval-column">
-							<div className="workflow-item data-title"><span> Approval Rating</span></div>
-							<div className="workflow-item stages"><span> 3 stages</span></div>
-						</div>
-						<div class="col offset-md-2 text-right">
-						<img src={dots} alt="dots" className="menu-icon"></img>
-						</div>
-					</div>							
-				</div> */}
+					{dataItems}				
 				</div>
-				</div>
+			</div>
 		)
 	}
 }
@@ -109,4 +51,4 @@ const mapStateToProps = state => {
 		};
   };  
 
-  export default connect(mapStateToProps, {getData: getData})(Workflow);
+export default connect(mapStateToProps, {getData: getData})(Workflow);
