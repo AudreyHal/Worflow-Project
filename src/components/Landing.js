@@ -23,6 +23,7 @@ class Landing extends Component{
 		if (this.props.data){
 			this.setState({showComponent: true })		
 		}
+		
 		if (!this.props.data){
 			this.setState({showLoader: true })		
 		}
