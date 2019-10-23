@@ -1,4 +1,4 @@
 
-export const getDocuments = () => ({
-  type: 'GET_DOCUMENTS',
+export const getData = () => ({
+  type: 'GET_DATA',
 })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getDocuments } from '../redux/actions/action';
+import { getData } from '../redux/actions/action';
 import flowchart from '../images/flowchart.png';
 import dots from '../images/dots.png';
 
@@ -109,4 +109,4 @@ const mapStateToProps = state => {
 		};
   };  
 
-  export default connect(mapStateToProps, {getDocuments: getDocuments})(Workflow);
+  export default connect(mapStateToProps, {getData: getData})(Workflow);

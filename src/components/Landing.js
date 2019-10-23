@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getDocuments } from '../redux/actions/action';
+import { getData } from '../redux/actions/action';
 import home from '../images/Home.png';
 import audit from '../images/User.png';
 import settings from '../images/settings.png';
@@ -11,7 +11,7 @@ import Workflow from './Workflow'
 class Landing extends Component{
 	constructor(props){
 		super(props);
-		this.props.getDocuments()
+		this.props.getData()
 		this.state={	
 			showComponent : false,
 			showLoader: false
@@ -35,7 +35,7 @@ componentDidMount(){
 
 }
 handleClick=()=>{
-	this.props.getDocuments()
+	this.props.getData()
 	console.log("this.props")
 	console.log(this.props.data)
 	if (this.props.data){
@@ -108,4 +108,4 @@ const mapStateToProps = state => {
 		};
   };  
 
-  export default connect(mapStateToProps, {getDocuments: getDocuments})(Landing);
+  export default connect(mapStateToProps, {getData: getData})(Landing);
