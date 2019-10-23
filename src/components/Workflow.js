@@ -16,16 +16,32 @@ class Workflow extends Component{
 componentDidMount(){
 	
 	console.log("this.props")
-	console.log(this.props.documents)
+	console.log(this.props.workflows[0])
 	
 
 }
 
 	render(){
-// 		const dataItems = this.props.documents.map((item, index) =>
-// 		<li key={ index }>
-// 	<b>{ item.body }</b>
-// </li>)
+		const dataItems = this.props.workflows.map((item, index) =>
+		
+
+<div key={ index } class="col-3 workflow-card">
+<div class="row">
+	<div class="col-1">
+		<img src={flowchart} alt="flowchart" className="menu-icon"></img>
+	</div>
+	<div class="col-auto approval-column">
+		<div className="workflow-item data-title"><span> { item.name }</span></div>
+		<div className="workflow-item stages"><span> { item.stages } stages</span></div>
+	</div>
+	<div class="col offset-md-2 text-right">
+	<img src={dots} alt="dots" className="menu-icon"></img>
+	</div>
+</div>							
+</div>
+
+
+)
 
 		
 		return (	
@@ -36,7 +52,8 @@ componentDidMount(){
 				</div>
 
 				<div class="row data-container">
-					<div class="col workflow-card">
+					{dataItems}
+					{/* <div class="col workflow-card">
 						<div class="row">
 							<div class="col-1">
 								<img src={flowchart} alt="flowchart" className="menu-icon"></img>
@@ -77,7 +94,7 @@ componentDidMount(){
 						<img src={dots} alt="dots" className="menu-icon"></img>
 						</div>
 					</div>							
-				</div>
+				</div> */}
 				</div>
 				</div>
 		)
@@ -87,7 +104,7 @@ componentDidMount(){
 
 const mapStateToProps = state => {
 	return {
-	  documents: state.documents,
+	  workflows: state.workflows,
 	  loading: state.loading
 		};
   };  

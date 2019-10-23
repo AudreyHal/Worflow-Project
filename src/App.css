@@ -129,5 +129,15 @@
 .stages{
   font-size: 12px;
   color: #8A94A6;
-  margin-bottom: 18px
+  margin-bottom: 23px
+}
+
+.full-width{
+  width: 100%
+}
+
+.error-text{
+  margin-top: 40px;
+  font-size: 16px;
+  color: #53627C;
 }

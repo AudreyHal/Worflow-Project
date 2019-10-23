@@ -13,7 +13,8 @@ class Landing extends Component{
 		super(props);
 		this.props.getDocuments()
 		this.state={	
-			showComponent : false
+			showComponent : false,
+			showLoader: false
 
 	}
 }
@@ -21,7 +22,8 @@ class Landing extends Component{
 componentDidMount(){
 	
 	console.log("this.props")
-	console.log(this.props.documents)
+	console.log(this.props.data)
+	// this.props.getDocuments()
 	
 // 	const obj=this.props.getDocuments();
 //  Object.keys(this.props.getDocuments()).map(key=> {
@@ -33,10 +35,17 @@ componentDidMount(){
 
 }
 handleClick=()=>{
+	this.props.getDocuments()
 	console.log("this.props")
-	console.log(this.props.documents)
-	this.setState({showComponent: true })
-	console.log("hyyuyyt"+this.state.showComponent)
+	console.log(this.props.data)
+	if (this.props.data){
+		this.setState({showComponent: true })
+		console.log("hyyuyyt"+this.state.showComponent)
+	}
+	if (!this.props.data){
+		this.setState({showLoader: true })
+		console.log("hyyuyyt"+this.state.showComponent)
+	}
 }	
 	render(){
 	
@@ -73,14 +82,17 @@ handleClick=()=>{
 								<div class="col-auto nav-item">Document Class</div>
 								<div class="col-auto nav-item" id="workflow-link" onClick={this.handleClick}><a >Workflows</a></div>
 							
-						</div>
-
-						
+						</div>						
 						
 						{this.state.showComponent ? (
-          		<Workflow ></Workflow>
-        		) : null} 
-				
+						<Workflow ></Workflow>
+						) : null} 
+
+						{this.state.showLoader ? (
+						<div className="text-center full-width row d-flex justify-content-center">          		
+							<div className="error-text">Make sure you are connected to the internet and try again.</div>
+				  		</div>
+        				) : null} 			
 						
 					</div>    
 				</div>
@@ -92,7 +104,7 @@ handleClick=()=>{
 
 const mapStateToProps = state => {
 	return {
-	  documents: state.documents
+	  data: state.workflows
 		};
   };  
 
