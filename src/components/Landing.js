@@ -53,13 +53,13 @@ class Landing extends Component{
 					<div className="col main-content-container">
 						<div className="navbar row">
 							
-								<div class="col-auto nav-item">Company</div>
-								<div class="col-auto nav-item">Users</div>
-								<div class="col-auto nav-item">User Roles</div>
-								<div class="col-auto nav-item">Department	</div>
-								<div class="col-auto nav-item">Units</div>
-								<div class="col-auto nav-item">Document Class</div>
-								<div class="col-auto nav-item" id="workflow-link" onClick={this.handleClick}><a >Workflows</a></div>
+								<div className="col-auto nav-item">Company</div>
+								<div className="col-auto nav-item">Users</div>
+								<div className="col-auto nav-item">User Roles</div>
+								<div className="col-auto nav-item">Department	</div>
+								<div className="col-auto nav-item">Units</div>
+								<div className="col-auto nav-item">Document className</div>
+								<div className="col-auto nav-item" id="workflow-link" onClick={this.handleClick}><a >Workflows</a></div>
 							
 						</div>						
 						
