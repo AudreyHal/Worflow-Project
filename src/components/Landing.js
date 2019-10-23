@@ -58,7 +58,7 @@ class Landing extends Component{
 								<div className="col-auto nav-item">User Roles</div>
 								<div className="col-auto nav-item">Department	</div>
 								<div className="col-auto nav-item">Units</div>
-								<div className="col-auto nav-item">Document className</div>
+								<div className="col-auto nav-item">Document Class</div>
 								<div className="col-auto nav-item" id="workflow-link" onClick={this.handleClick}><a >Workflows</a></div>
 							
 						</div>						
