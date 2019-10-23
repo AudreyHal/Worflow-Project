@@ -55,7 +55,7 @@ handleClick=()=>{
 						<div className="menu-items">
 							<div className="menu-item"><img src={home} alt="home" className="menu-icon"></img><span> Dashboard</span></div>
 							<div className="menu-item"><img src={audit} alt="audit" className="menu-icon"></img><span> Audit Log</span></div>
-							<div className="menu-item"><img src={settings} alt="settings" className="menu-icon"></img><span> Settings</span></div>
+							<div className="menu-item" id="settings"><img src={settings} alt="settings" className="menu-icon"></img><span> Settings</span></div>
 						</div>
 						<div>
 						<div className="menu-item" id="logout-container"><img src={logout} alt="logout" className="menu-icon"></img><span>Log Out</span></div>
@@ -63,35 +63,25 @@ handleClick=()=>{
 					</div>
 					
 					<div className="col main-content-container">
-						<div className="navbar">
-							<div class="row">
-								<div class="col">Company</div>
-								<div class="col">Users</div>
-								<div class="col">User Roles</div>
-								<div class="col">Department	</div>
-								<div class="col">Units</div>
-								<div class="col">Document Class</div>
-								<div class="col"><a onClick={this.handleClick}>Workflows</a></div>
-							</div>
+						<div className="navbar row">
+							
+								<div class="col-auto nav-item">Company</div>
+								<div class="col-auto nav-item">Users</div>
+								<div class="col-auto nav-item">User Roles</div>
+								<div class="col-auto nav-item">Department	</div>
+								<div class="col-auto nav-item">Units</div>
+								<div class="col-auto nav-item">Document Class</div>
+								<div class="col-auto nav-item" id="workflow-link" onClick={this.handleClick}><a >Workflows</a></div>
+							
 						</div>
 
-						<div class="workflow-header">Workflows</div>
+						
 						
 						{this.state.showComponent ? (
-          <Workflow ></Workflow>
-        ) : null} 
-					<button onClick={this.handleClick} >Hit</button>
-						{/* <div class="row">
-							<div class="col-sm-6 col-md-4">
-								One of three columns
-							</div>
-							<div class="col-sm-6 col-md-4">
-								One of three columns
-							</div>
-							<div class="col-sm-6 col-md-4">
-								One of three columns
-							</div>
-						</div> */}
+          		<Workflow ></Workflow>
+        		) : null} 
+				
+						
 					</div>    
 				</div>
 			</div>

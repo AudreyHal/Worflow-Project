@@ -1,7 +1,8 @@
 
 .landing-page{
   height: 100vh;
-  background-color: red
+  background-color: #E4E4E4;
+
 }
 
 .sidebar{
@@ -12,6 +13,7 @@
 
 .full-page-height{
   height: 100% ;
+  margin: 0px
 }
 
 .menu-item{
@@ -45,3 +47,87 @@
   margin-top: 200px
 }
 
+.navbar{
+  background-color: white;
+  margin-top: 60px;
+  padding: 24px 0px 24px 10px;
+  color: #8A94A6;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 35px
+}
+
+.nav-item{
+  padding: 0px 35px;
+  border-right: 0.5px solid #D8D8D8;
+}
+
+.main-content-container{
+  padding: 0px 32px
+}
+
+.App{
+  width: 100vw
+}
+
+#workflow-link:hover, #workflow-link:active,#workflow-link:visited{
+  color: #43536F;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#settings{
+  color: #43536F;
+  font-weight: bold;
+}
+
+.menu-icon{
+  margin-right: 16px
+}
+
+.header-container{
+  font-size: 18px; 
+  color: #53627C;
+}
+
+.workflow-container{
+  text-align: right;
+  margin-bottom: 34px
+  
+}
+
+.workflow-button{
+  background-color: #0C66FF;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-align: center;
+  padding: 11.25px;
+  border-radius: 5px;
+  border: 0px
+}
+
+.workflow-card{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 24px #F1F2F4;
+  border-radius: 5px;
+  padding: 18px 16px;
+  margin:  10px
+
+}
+
+.approval-column{
+  padding: 0px 26px 
+}
+
+.data-title{
+  font-size: 16px;
+  color: #53627C;
+  margin-bottom: 15px
+}
+
+.stages{
+  font-size: 12px;
+  color: #8A94A6;
+  margin-bottom: 18px
+}
